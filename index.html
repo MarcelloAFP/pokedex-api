@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéBusca do Cello</title>
+    <link rel="stylesheet" href="style.css">
+</head>     
+<body>
+    <div class="container"> <!-- AQUI COMEÇA O CONTAINER -->
+        <h1>Buscador Pokémon ⚡</h1>   
+        
+        <!-- Área de busca (agora dentro do container) -->
+        <div class="busca-box">
+          <input type="text" id="pokemonInput" placeholder="Digite o nome do Pokémon...">
+          <button id="buscarBtn">Buscar</button>
+        </div>
+
+        <!-- Onde a mágica vai aparecer (Card) -->
+        <div id="pokemonCard" class="card">
+          <h2 id="pokemonName">Quem é esse Pokémon?</h2>
+          <img src="" id="pokemonImage" alt="">
+          <p id="pokemonType"></p>
+          
+          <!-- Coloquei os stats dentro do card para ficar mais organizado -->
+          <div class="stats" style="margin-top: 15px; display: flex; justify-content: space-around;">
+            <p>Peso: <span id="weight">--</span>kg</p>
+            <p>Altura: <span id="height">--</span>m</p>
+          </div>
+
+          <!-- Novos Atributos de Batalha -->
+          <div class="base-stats">
+          <div class="stat-row">
+           <span>HP</span>
+          <div class="bar-bg"><div id="hp-bar" class="bar-fill"></div></div>
+          </div>
+           <div class="stat-row">
+             <span>ATK</span>
+            <div class="bar-bg"><div id="atk-bar" class="bar-fill"></div></div>
+             </div>
+           <div class="stat-row">
+               <span>DEF</span>
+           <div class="bar-bg"><div id="def-bar" class="bar-fill"></div></div>
+  </div>
+  </div>
+        </div>
+
+    </div> <!-- AQUI FECHA O CONTAINER (O SEGREDO ESTÁ AQUI) -->
+
+    <!-- Nosso arquivo de lógica -->
+    <script src="script.js"></script>
+</body>
+</html>

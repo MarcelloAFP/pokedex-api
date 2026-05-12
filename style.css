@@ -1,0 +1,155 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background:radial-gradient(circle, #2b2b2b 0%, #111 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+   background: rgba(255, 255, 255, 0.5); /* Fundo levemente transparente */
+   backdrop-filter: blur(15px); /* Efeito de vidro fosco */
+   border: 2px solid #ffde00;
+   padding: 40px;
+   border-radius: 30px;
+   box-shadow: 0 0 40px rgba (0, 0, 0, 0.7); /*Brilho neon amarelo*/
+   width: 400px;
+   text-align: center;
+   transition: transform 0.3s ease;
+}
+
+h1{
+    color: #ffde00;
+    text-shadow: 0 0 10px rgba(255, 222, 0 , 0.5);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* Área de Busca*/
+
+.busca-box{
+     display: flex;
+     gap: 10px;
+     background: #333;
+     padding: 5px;
+     border-radius: 50px;
+     margin-bottom: 30px;
+}
+ input{
+      background: transparent;
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      flex: 1;
+      outline: none;
+ }
+
+ button{
+      background: #ffde00;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3S;
+ }
+
+ button:hover{
+      background: #fff;
+      box-shadow: 0 0 15px #ffde00;
+ }
+
+ .card{
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+
+ #pokemonImage{
+      width: 180px;
+      filter: drop-shadow(0 0 10px rgba(255, 222, 0, 0.4));
+      transition: transform 0.5s;
+
+ }
+ #pokemonImage:hover {
+      transform: scale(1.1) rotate(5deg);
+
+ }
+
+ #pokemonName{
+    text-transform: capitalize;
+    margin: 10px 0;
+ }
+
+ #pokemonType{
+     display: inline-block;
+     background-color: #ffde00;
+     color: #1a1a1a;
+     padding: 5px 15px;
+     border-radius: 20px;
+     font-size: 0.8rem;
+     margin-top: 10px;
+     letter-spacing: 1px;
+ }
+
+ .stats {
+   display: grid;
+   grid-template-columns: 1fr 1fr; /* Divide em duas colunas iguais */
+   gap: 10px;
+   margin-top: 20px;
+   border-top: 1px solid #444;
+   padding-top: 15px;
+ }
+
+ .stats p {
+   font-size: 0.9rem;
+   background: rgba(0, 0, 0, 0.2);
+   padding: 8px;
+   border-radius: 10px;
+   margin: 0; /* Remove margens padrão para não quebrar o alinhamento */
+ }
+
+ /* Cor especial para os números das estatísticas */
+ span{
+   color: #ffde00;
+   font-weight: bold;
+ }
+
+ /* --- Atributos de Batalha (Novo) --- */
+
+.base-stats {
+    margin-top: 20px;
+    text-align: left; /* Alinha o texto à esquerda para a barra crescer para a direita */
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.stat-row span {
+    width: 40px; /* Largura fixa para os nomes HP, ATK e DEF ficarem alinhados */
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.bar-bg {
+    background: #333; /* Fundo cinza escuro da barra */
+    flex: 1; /* Faz a barra ocupar o resto do espaço */
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden; /* Garante que o preenchimento não saia para fora */
+}
+
+.bar-fill {
+    height: 100%;
+    background: #ffde00; /* Cor inicial amarela */
+    width: 0%; /* O JavaScript vai mudar isso! */
+    transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animação suave */
+}
